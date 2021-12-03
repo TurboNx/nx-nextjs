@@ -14,7 +14,7 @@ const { definitions, utils } = require('./helpers');
 module.exports = (config) => {
   config = reactWebpackConfig(config);
 
-  rulesWithoutStyles = utils.removeStylesFromRules(config);
+  const rulesWithoutStyles = utils.removeStylesFromRules(config);
 
   config.module.rules = [
     ...rulesWithoutStyles,
@@ -26,6 +26,8 @@ module.exports = (config) => {
     // redefine the alias because the nextjs internally adds `./` to the CSS url() path
     [`./@nx-nextjs/shared/assets/fonts`]: `${appRootPath}/libs/shared/assets/fonts`,
   });
-
+  if (process.env.NODE_ENV === 'development') {
+    process.env.TAILWIND_MODE = 'watch';
+  }
   return config;
 };
