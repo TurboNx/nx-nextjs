@@ -4,20 +4,6 @@ import { BasicLayout } from '@nx-nextjs/shared/components';
 import { useSelector } from 'react-redux';
 import { INavLinkGroup } from '@fluentui/react/lib/Nav';
 import { RootState } from '@nx-nextjs/shared/store';
-// adding an empty title string to each link removes the tooltip;
-// it's unnecessary now that the text wraps, and will not truncat;
-const navLinkGroups: INavLinkGroup[] = [
-  {
-    name: 'Dashboard',
-    links: [
-      {
-        key: 'Home',
-        name: 'Home',
-        url: '/dashboard',
-      },
-    ],
-  },
-];
 export const PrivateAuth: React.FC<{ children: JSX.Element }> = ({
   children,
 }) => {
@@ -30,11 +16,13 @@ export const PrivateAuth: React.FC<{ children: JSX.Element }> = ({
 
   return children;
 };
-export interface PrivateRouteProps {}
+export interface PrivateRouteProps {
+  navLinkGroups: INavLinkGroup[];
+}
 export const PrivateRoute = (props: PrivateRouteProps) => {
   return (
     <PrivateAuth>
-      <BasicLayout navLinkGroups={navLinkGroups} />
+      <BasicLayout navLinkGroups={props.navLinkGroups} />
     </PrivateAuth>
   );
 };
