@@ -9,7 +9,7 @@
         "react/react-in-jsx-scope": "off",
         "react/no-unescaped-entities": "off",
         "@nrwl/nx/enforce-module-boundaries": [
-          "error",
+          "off",
           {
             "enforceBuildableLibDependency": true,
             "allow": [],
