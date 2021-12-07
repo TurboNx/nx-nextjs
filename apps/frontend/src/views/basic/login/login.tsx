@@ -1,13 +1,13 @@
 import { PrimaryButton, Spinner, Text, TextField } from '@fluentui/react';
+import { RootState } from '@nx-nextjs/shared/store';
 import { useFormik } from 'formik';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 
-import { RootState } from '../../state';
-import { useLoginMutation } from '../../state/api/user';
 import { LoginReq } from './types';
+import { useLoginMutation } from '@nx-nextjs/shared/api';
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string().required('Username is required'),

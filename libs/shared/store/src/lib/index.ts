@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counter/reducer';
 import accountReducer from './account/reducer';
-import { appApi } from './api';
 import { setupListeners } from '@reduxjs/toolkit/query';
+import { appApi } from '@nx-nextjs/shared/api';
 
 export const store = configureStore({
   reducer: {

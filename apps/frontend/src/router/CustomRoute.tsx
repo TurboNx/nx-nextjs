@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes, useRoutes } from 'react-router-dom';
-import NotFound from '../views/not-found';
-import Login from '../views/login/login';
+import NotFound from '../views/basic/not-found';
+import Login from '../views/basic/login/login';
 import { PrivateRoute } from './PrivateRoute';
 function CustomRoute() {
   return useRoutes([

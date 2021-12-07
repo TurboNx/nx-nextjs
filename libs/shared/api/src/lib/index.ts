@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { RootState } from '..';
+import { RootState } from '@nx-nextjs/shared/store';
 
 // Define a service using a base URL and expected endpoints
 export const appApi = createApi({

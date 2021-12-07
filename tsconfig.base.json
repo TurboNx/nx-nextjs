@@ -16,10 +16,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-nextjs/di": ["libs/di/src/index.ts"],
+      "@nx-nextjs/i18n": ["libs/i18n/src/index.ts"],
+      "@nx-nextjs/shared/api": ["libs/shared/api/src/index.ts"],
       "@nx-nextjs/shared/assets/*": ["libs/shared/assets/*"],
       "@nx-nextjs/shared/components": ["libs/shared/components/src/index.ts"],
-      "@nx-nextjs/di": ["libs/di/src/index.ts"],
-      "@nx-nextjs/i18n": ["libs/i18n/src/index.ts"]
+      "@nx-nextjs/shared/store": ["libs/shared/store/src/index.ts"],
+      "@nx-nextjs/shared/types": ["libs/shared/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

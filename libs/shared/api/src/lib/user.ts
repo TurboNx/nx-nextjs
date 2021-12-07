@@ -1,6 +1,6 @@
 import { appApi } from '.';
-import { User } from '../../types/user';
-import { loggedIn, loggedOut } from '../account/actions';
+import { User } from '@nx-nextjs/shared/types';
+import { loggedIn, loggedOut } from '@nx-nextjs/shared/store';
 
 type UsersResponse = User[];
 

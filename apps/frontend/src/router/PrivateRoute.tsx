@@ -2,8 +2,8 @@ import React from 'react';
 import { Navigate, useLocation, useRoutes } from 'react-router-dom'; // A wrapper for <Route> that redirects to the login
 import { BasicLayout } from '@nx-nextjs/shared/components';
 import { useSelector } from 'react-redux';
-import { RootState } from '../state';
 import { INavLinkGroup } from '@fluentui/react/lib/Nav';
+import { RootState } from '@nx-nextjs/shared/store';
 // adding an empty title string to each link removes the tooltip;
 // it's unnecessary now that the text wraps, and will not truncat;
 const navLinkGroups: INavLinkGroup[] = [
