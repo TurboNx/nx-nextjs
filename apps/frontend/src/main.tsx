@@ -8,7 +8,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import { createMockServer } from './helpers';
 
 import App from './app/app';
-import { store } from './state';
+import { store } from '@nx-nextjs/shared/store';
 
 createMockServer();
 
